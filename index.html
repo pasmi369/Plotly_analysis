@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,  shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <style>
+      .dashboard-image {
+        background-image: url('./Resources/Biodiversity_dashboard.jpeg');
+        background-repeat: no-repeat center center ;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      h1 {
+        color: white;
+      }
+      h5 {
+        color:darkblue
+      }
+      p {
+        color: white;
+      }
+      .demographic {
+        color: darkblue;
+      }
+      #bar {
+        color: blue;
+        background-color: brown;
+      }
+
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="dashboard-image col-md-12 jumbotron text-center "> 
+           <h1>Belly Button Biodiversity <br>Dashboard</h1>
+            <p>Use the interactive charts below to explore the dataset</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="dropdown">
+              <h5><b><u>Test Subject ID No.:</u></b></h5>
+              <select id="selOption" onchange="optionChanged(this.value)"></select>
+            </div>
+            <div class="panel panel-primary" style="color: darkgreen;">
+              <div class="panel-heading">
+                <h3 class="panel-title"><u>Demographic</u></h3>
+                <p class="demographic">The Ethnicity, Gender, Age, Location, BBType and WFreq information based on the Test Subject ID is displayed below:</p>
+              </div>
+              <div id="metadata" class="panel-body"></div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div id="bar"></div>
+          </div>
+          <div class="col-md-2">
+            <div id="gauge"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="bubble"></div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="js/charts.js"></script>    
+</body>
+</html>
