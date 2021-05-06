@@ -139,7 +139,7 @@ function buildCharts(sample) {
       {
         domain: {x: [0,1], y:[0,1]},
         value: frequency,
-        title: {text: "<b>Belly Button Washing Frequency</b> <br> Scrubs Per Week",},
+        title: {text: "<b>Belly Button Washing Frequency</b> <br> <b>Scrubs Per Week</b>",},
         type: "indicator",
         mode: "gauge+number",
         gauge: {
